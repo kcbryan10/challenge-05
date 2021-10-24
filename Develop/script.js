@@ -10,7 +10,6 @@ $(document).ready(function(){
         var text = $(this).siblings(".content-input").val();
         var time = $(this).parent().attr("id");
         localStorage.setItem(time, text);
-        console.log(time);
     })
 
     // Highlight column in relation to time
@@ -18,30 +17,31 @@ $(document).ready(function(){
         var currentTime = moment().hour();
 
         $(".content-input").each(function(){
-            var columnTime = parseInt($(this).parent().attr("id").split("hour")[1]);
+            var columnTime = $(this).parent().attr("id");
 
             if (columnTime < currentTime){
-                $(this).removeclass("future");
-                $(this).removeclass("present");
-                $(this).addclass("past");
+                $(this).removeClass("future");
+                $(this).removeClass("present");
+                $(this).addClass("past");
             }
 
-            else if (columnTime === currentTime){
-                $(this).removeclass("future");
-                $(this).removeclass("past");
-                $(this).addclass("present");
+            else if (columnTime == currentTime){
+                $(this).removeClass("future");
+                $(this).removeClass("past");
+                $(this).addClass("present");
             }
 
-            else if(columnTime < currentTime) {
-                $(this).removeclass("past");
-                $(this).removeclass("present");
-                $(this).addclass("future");
+            else {
+                $(this).removeClass("past");
+                $(this).removeClass("present");
+                $(this).addClass("future");
             }
         })
+
      }
 
     //get items from local storage and display on page 
-    $("#09 .content-input").val(localStorage.getItem("09"));
+    $("#9 .content-input").val(localStorage.getItem("9"));
     $("#10 .content-input").val(localStorage.getItem("10"));
     $("#11 .content-input").val(localStorage.getItem("11"));
     $("#12 .content-input").val(localStorage.getItem("12"));
