@@ -12,4 +12,4 @@ Website will be able to track work schedule and tell user wheather task is past,
 ## Website
 https://kcbryan10.github.io/challenge-05/
 
-https://github.com/kcbryan10/challenge-05/blob/main/Develop/images/Capture.PNG
+![Alt text](https://github.com/kcbryan10/challenge-05/blob/main/Develop/images/Capture.PNG)
