@@ -1,1 +1,15 @@
-# Work Day Scheduler Starter Code
+
+# Challenge-05 Work Day Scheduler
+
+## Purpose
+Website will be able to track work schedule and tell user wheather task is past, present, or future based on color coding.
+
+## Built With
+* HTML
+* CSS
+* JS
+
+## Website
+
+
+![image](https://courses.bootcampspot.com/courses/798/files/886117/preview)
